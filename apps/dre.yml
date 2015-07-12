@@ -25,22 +25,22 @@ commands:
 
 compose:
   environment:
-    APP_NAME: DRE
+    APP_NAME: DRE Demo
     MONGO_HOST: persistentMongo
 
-test:
-  image: node
-  once:
-    - npm install -g grunt-cli
-    - npm install -g bower
-    - npm install -g mocha
-    - npm install --quiet
-    - bower install
-  suites:
-    - name: test
-      command:
-        - grunt
-      services:
-        - persistentMongo
-        - persistentRedis
-      description: Run DRE tests
+#test:
+#  image: node
+#  once:
+#    - npm install -g grunt-cli
+#    - npm install -g bower
+#    - npm install -g mocha
+#    - npm install --quiet
+#    - bower install
+#  suites:
+#    - name: dretest
+#      command:
+#        - grunt
+#      services:
+#        - persistentMongo
+#        - persistentRedis
+#      description: Run DRE tests
