@@ -5,8 +5,8 @@ image: node
 
 depends:
   services:
-    - mongo
-    - redis
+    - persistentMongo
+    - persistentRedis
 
 host_forwarding:
   - host_name: argonaut.amida.com
