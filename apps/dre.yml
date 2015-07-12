@@ -29,9 +29,13 @@ compose:
     MONGO_HOST: persistentMongo
 
 test:
-  image: asdf
+  image: node
   once:
-    - asdf
+    - npm install -g grunt-cli
+    - npm install -g bower
+    - npm install -g mocha
+    - npm install --quiet
+    - bower install
   suites:
     - name: test
       command:

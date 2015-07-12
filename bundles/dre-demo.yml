@@ -1,4 +1,4 @@
 description: Opens an Instance of DRE and Argonaut Client (Web) Demo
 apps:
   - dre
-  - argonaut-client
+  - argonautclient

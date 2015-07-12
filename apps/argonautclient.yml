@@ -22,5 +22,5 @@ commands:
 
 compose:
   environment:
-    APP_NAME: argonaut-client
+    APP_NAME: argonautclient
     MONGO_HOST: persistentMongo
