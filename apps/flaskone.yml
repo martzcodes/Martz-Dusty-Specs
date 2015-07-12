@@ -22,19 +22,3 @@ compose:
   environment:
     APP_NAME: Flask One
     MONGO_HOST: persistentMongo
-
-test:
-  image: python:2.7.10
-  once:
-    - pip install -r requirements.txt
-  suites:
-    - name: unit
-      command:
-        - python app_test.py
-      description: Run unit tests in their own container
-    - name: mongo_test
-      command:
-        - python mongo_test.py
-      services:
-        - testMongo
-      description: run a test against a mongo instance

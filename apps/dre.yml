@@ -1,5 +1,5 @@
 repo: github.com/amida-tech/DRE
-mount: /dre
+mount: /amida-dre
 
 image: node
 
@@ -9,7 +9,7 @@ depends:
     - persistentRedis
 
 host_forwarding:
-  - host_name: dre.amida.com
+  - host_name: local.dre.com
     host_port: 80
     container_port: 3000
 
@@ -19,28 +19,12 @@ commands:
     - npm install -g bower
     - npm install -g mocha
     - npm install --quiet
-    - bower install
+    - bower install --allow-root
   always:
     - node server
 
 compose:
   environment:
     APP_NAME: DRE Demo
-    MONGO_HOST: persistentMongo
-
-#test:
-#  image: node
-#  once:
-#    - npm install -g grunt-cli
-#    - npm install -g bower
-#    - npm install -g mocha
-#    - npm install --quiet
-#    - bower install
-#  suites:
-#    - name: dretest
-#      command:
-#        - grunt
-#      services:
-#        - persistentMongo
-#        - persistentRedis
-#      description: Run DRE tests
+    #DB: persistentMongo
+  net: container:persistentMongo
