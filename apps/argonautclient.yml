@@ -9,7 +9,7 @@ depends:
     - persistentRedis
 
 host_forwarding:
-  - host_name: local.argonaut.com
+  - host_name: argonaut.local.com
     host_port: 80
     container_port: 3001
 

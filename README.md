@@ -9,7 +9,7 @@ Usage:
 
 `dusty bundles list`
 
-Then activate the one(s) you want:  `dusty bundles activate dre-demo` (example)
+Then activate the one(s) you want:  `dusty bundles activate hello-world` (example)
 
 and...
 

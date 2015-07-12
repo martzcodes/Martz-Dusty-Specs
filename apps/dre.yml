@@ -9,7 +9,7 @@ depends:
     - persistentRedis
 
 host_forwarding:
-  - host_name: local.dre.com
+  - host_name: dre.local.com
     host_port: 80
     container_port: 3000
 
