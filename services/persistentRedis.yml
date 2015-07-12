@@ -1,0 +1,6 @@
+# Services are defined through vanilla Composefiles. No
+# Dusty-specific logic here.
+image: redis
+command: redis-server
+volumes:
+    - /persist/redis:/data

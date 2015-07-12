@@ -1,0 +1,4 @@
+# Services are defined through vanilla Composefiles. No
+# Dusty-specific logic here.
+image: redis
+command: mongod --nojournal --noprealloc --smallfiles

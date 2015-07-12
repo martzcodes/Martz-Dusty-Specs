@@ -1,0 +1,26 @@
+repo: github.com/amida-tech/argonaut-client
+mount: /argonaut-client
+
+image: node
+
+depends:
+  services:
+    - mongo
+    - redis
+
+host_forwarding:
+  - host_name: argonaut.amida.com
+    host_port: 80
+    container_port: 3001
+
+commands:
+  once:
+    - npm install
+    - bower install
+  always:
+    - node server
+
+compose:
+  environment:
+    APP_NAME: argonaut-client
+    MONGO_HOST: persistentMongo
